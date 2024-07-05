@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+helmCharts:
+- name: gateway-operator
+  includeCRDs: true
+  repo: https://charts.konghq.com
+  version: v0.1.9
+  releaseName: kong-gateway-operator
+  namespace: kong-gateway-operator
+  # valuesFile: dev.values.yaml
